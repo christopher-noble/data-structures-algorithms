@@ -1,3 +1,3 @@
 # data-structures-algorithms
 
-This repository is track progression in developing data structures and algorithms.
+This repository tracks progression in developing data structures and algorithms.
