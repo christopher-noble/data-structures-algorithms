@@ -4,8 +4,13 @@ class LinkedList<T> {
   private head: ClassNode<T> | null;
   private size: number;
 
-  public getSize(): void {
-    console.log(this.size);
+  constructor() {
+    this.head = null;
+    this.size = 0;
+  }
+
+  public getSize(): number {
+    return this.size;
   }
 
   public add(value: T): void {
@@ -52,10 +57,9 @@ class LinkedList<T> {
     return false;
   }
 
-  public find(value: T): void {
+  public find(value: T): T | null {
     if (!this.head) {
-      console.log(null);
-      return;
+      return null;
     }
 
     if (this.head.data === value) {
@@ -66,13 +70,13 @@ class LinkedList<T> {
 
     while (current.next) {
       if (current.next.data === value) {
-        console.log(current.next.data);
+        return current.next.data;
       }
 
       current = current.next;
     }
 
-    return;
+    return null;
   }
 
   public print(): void {
@@ -82,23 +86,22 @@ class LinkedList<T> {
     }
 
     let current = this.head;
-    console.log(current.data);
+    current.data;
 
     while (current.next) {
       current = current.next;
       console.log(current.data);
     }
+
+    return;
   }
 }
 
-const linkedList = new LinkedList<number>();
+const linkedList = new LinkedList();
 
 linkedList.add(5);
 linkedList.add(4);
 linkedList.add(3);
-
-linkedList.remove(4);
-linkedList.find(3);
 
 linkedList.print();
 
