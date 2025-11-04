@@ -64,7 +64,7 @@ class Queue<T> {
 
   public print(): void {
     if (!this.head) {
-      console.log("Nothin here!");
+      console.log("Nothing here!");
       return;
     }
 
